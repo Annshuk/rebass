@@ -2,15 +2,15 @@ export const title = 'Theming'
 
 # Theming
 
-Rebass components are built with themeability in mind.
+rebass components are built with themeability in mind.
 All colors, typographic styles, layout styles, and component variants can be completely customized with theming.
 
 ## ThemeProvider
 
-To apply themes to Rebass components, add a [ThemeProvider][] component to the root of your application and pass a `theme` object as a prop.
+To apply themes to rebass components, add a [ThemeProvider][] component to the root of your application and pass a `theme` object as a prop.
 
 If you're using Emotion by itself, install the `emotion-theming` package.
-If you're using Rebass with [Theme UI][], use its `ThemeProvider` or the `gatsby-plugin-theme-ui` package.
+If you're using rebass with [Theme UI][], use its `ThemeProvider` or the `gatsby-plugin-theme-ui` package.
 
 ```jsx
 import React from 'react'
@@ -25,10 +25,10 @@ export default props =>
   </ThemeProvider>
 ```
 
-Rebass follows the [Theme Specification][],
+rebass follows the [Theme Specification][],
 which allows you to define thematic values in a more portable format.
-Themes created for [Styled System][] or [Theme UI][] will work with Rebass with no additional configuration required.
-This also means that themes created for use with Rebass will work in other applications that follow the same specification.
+Themes created for [Styled System][] or [Theme UI][] will work with rebass with no additional configuration required.
+This also means that themes created for use with rebass will work in other applications that follow the same specification.
 
 ## Example
 
@@ -82,7 +82,7 @@ export default {
 
 ## Preset
 
-To quickly get started without creating a custom theme, install the Rebass Preset package and use it in place of a custom theme.
+To quickly get started without creating a custom theme, install the rebass Preset package and use it in place of a custom theme.
 
 ```sh
 npm i @rebass/preset

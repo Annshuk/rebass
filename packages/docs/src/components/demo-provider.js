@@ -20,7 +20,7 @@ const themes = [
 ]
 
 export default props => {
-  const [ theme, setTheme ] = useState('preset')
+  const [theme, setTheme] = useState('preset')
 
   const demoTheme = merge({}, rebass, presets[theme])
 

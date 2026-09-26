@@ -23,7 +23,7 @@ const App = props => {
     <ThemeProvider theme={theme}>
       <Box variant='styles.root'>
         <Heading as='h1' mb={4}>
-          Rebass Sandbox
+          rebass Sandbox
         </Heading>
         <Button variant='primary' mr={3}>
           Beep

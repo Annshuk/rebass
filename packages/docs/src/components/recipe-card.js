@@ -8,7 +8,7 @@ export default props => {
   const example = children.find(child =>
     child.type === 'pre' || child.props.mdxType === 'pre')
 
-  const [ pre ] = React.Children.toArray(example.props.children)
+  const [pre] = React.Children.toArray(example.props.children)
   const preview = React.cloneElement(pre, {
     preview: true
   })

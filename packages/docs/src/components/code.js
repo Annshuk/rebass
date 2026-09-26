@@ -8,16 +8,16 @@ import {
 } from '@jxnblk/react-live'
 import { ThemeProvider } from 'theme-ui'
 import Prism from '@theme-ui/prism'
-import * as Rebass from 'rebass'
-import * as RebassForms from '@rebass/forms'
-import * as RebassLayout from '@rebass/layout'
+import * as rebass from 'rebass'
+import * as rebassForms from '@rebass/forms'
+import * as rebassLayout from '@rebass/layout'
 import { Flex, Box } from 'rebass'
 import { countries } from 'countries-list'
 
 const scope = {
-  ...Rebass,
-  ...RebassForms,
-  ...RebassLayout,
+  ...rebass,
+  ...rebassForms,
+  ...rebassLayout,
   ThemeProvider,
   props: {
     image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
@@ -30,7 +30,7 @@ scope.Switch = props => {
   const toggle = () => setActive(!active)
 
   return (
-    <RebassForms.Switch
+    <rebassForms.Switch
       checked={active}
       onClick={toggle}
       {...props}

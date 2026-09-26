@@ -19,7 +19,7 @@
     "styled-components": "babel src -d styled-components --env-name styled"
   },
   "dependencies": {
-    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@styled-system/css": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",

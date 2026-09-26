@@ -1,7 +1,7 @@
 {
   "name": "@rebass/preset-material",
   "version": "4.1.0",
-  "description": "Material Design theme preset for use with Rebass",
+  "description": "Material Design theme preset for use with rebass",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "babel src -d dist --root-mode upward",

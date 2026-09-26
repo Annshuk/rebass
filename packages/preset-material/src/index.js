@@ -59,7 +59,7 @@ export const preset = {
       fontFamily: 'heading',
       fontWeight: 'heading',
       lineHeight: 'heading',
-      fontSize: [ 6, 7 ],
+      fontSize: [6, 7],
     },
     caps: {
       textTransform: 'uppercase',

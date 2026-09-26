@@ -1,7 +1,6 @@
-
 <img src='https://rebassjs.org/logo.svg' width='128' height='128' />
 
-# Rebass
+# rebass
 
 React primitive UI components built with [Styled System][].
 https://rebassjs.org
@@ -16,7 +15,6 @@ https://rebassjs.org
 [travis]: https://travis-ci.org/rebassjs/rebass
 [coverage-badge]: https://flat.badgen.net/codecov/c/github/rebassjs/rebass
 [coverage]: https://codecov.io/github/rebassjs/rebass
-
 [downloads-badge]: https://flat.badgen.net/npm/dw/rebass
 [version-badge]: https://flat.badgen.net/npm/v/rebass
 [license-badge]: https://flat.badgen.net/badge/license/MIT/blue
@@ -29,15 +27,17 @@ npm i rebass
 ## Getting Started
 
 ```jsx
-import React from 'react'
-import { Box, Heading, Button } from 'rebass'
+import React from 'react';
+import { Box, Heading, Button } from 'rebass';
 
-export default props =>
+export default (props) => (
   <Box>
     <Heading>Hello</Heading>
-    <Button>Rebass</Button>
+    <Button>rebass</Button>
   </Box>
+);
 ```
+
 ## Features
 
 - Start your design system without boiling the ocean
@@ -50,14 +50,13 @@ export default props =>
 - Flexibility built in for high design & development velocity
 - Minimal footprint at about 4KB
 
-
 [reflexbox]: https://rebassjs.org/reflexbox
 
 > "One of the best React component libs out there"
 >
 > – [Max Stoiber](https://twitter.com/mxstbr/status/882657561111080960)
 
-> "Rebass is the Bootstrap of React."
+> "rebass is the Bootstrap of React."
 >
 > – [Jori Lallo](https://twitter.com/jorilallo/status/882990343225868289)
 
@@ -67,7 +66,7 @@ export default props =>
 
 ## Principles
 
-Rebass is intended to be:
+rebass is intended to be:
 
 - **Minimal**
 - **Useful**
@@ -82,7 +81,7 @@ Rebass is intended to be:
 > – [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well)
 
 See [Patterns for Style Composition in React](http://jxnblk.com/writing/patterns-for-style-composition-in-react/)
-for more on some of the thought behind Rebass.
+for more on some of the thought behind rebass.
 
 ## Documentation
 
@@ -104,7 +103,6 @@ for more on some of the thought behind Rebass.
 Try it out:
 https://codesandbox.io/s/github/rebassjs/rebass/tree/master/examples/sandbox
 
-
 ### Related
 
 - [Styled System][]
@@ -124,10 +122,9 @@ See the [Migration Guide](https://rebassjs.org/migrating/).
 #### Previous Versions
 
 - [v3.2.2](https://github.com/rebassjs/rebass/tree/v3.2.2) – [v3 Docs](https://rebass-v3.now.sh)
-- [v2.3.2](https://github.com/rebassjs/rebass/tree/v2) – [Docs for Rebass v2](https://rebass-v2.now.sh)
+- [v2.3.2](https://github.com/rebassjs/rebass/tree/v2) – [Docs for rebass v2](https://rebass-v2.now.sh)
 - [v1.0.7](https://github.com/rebassjs/rebass/tree/v1.0.7)
 
 ---
 
 [Contributing](CONTRIBUTING.md) | [MIT License](LICENSE.md)
-

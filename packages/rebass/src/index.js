@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import { forwardRef } from 'react'
 import { Box, Flex } from 'reflexbox'
 
 export { Box, Flex }

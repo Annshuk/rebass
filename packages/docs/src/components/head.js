@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import pkg from 'rebass/package.json'
 
 export default props => {
-  const title = [props.title, 'Rebass'].filter(Boolean).join(' | ')
+  const title = [props.title, 'rebass'].filter(Boolean).join(' | ')
 
   return (
     <Helmet

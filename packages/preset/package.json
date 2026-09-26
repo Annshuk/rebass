@@ -1,7 +1,7 @@
 {
   "name": "@rebass/preset",
   "version": "4.1.0",
-  "description": "Base theme preset for use with Rebass",
+  "description": "Base theme preset for use with rebass",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "babel src -d dist --root-mode upward",

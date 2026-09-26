@@ -2,7 +2,7 @@ export const title = 'Getting Started'
 
 # Getting Started
 
-Install the core Rebass library.
+Install the core rebass library.
 
 ```sh
 npm i rebass
@@ -10,9 +10,9 @@ npm i rebass
 
 ## ThemeProvider
 
-By default, Rebass components are stylistically unopinionated and do not include a theme.
+By default, rebass components are stylistically unopinionated and do not include a theme.
 You can add a theme to your application with a `ThemeProvider` component and by providing a theme in context.
-For this guide, use the Emotion `ThemeProvider` with the default Rebass preset theme.
+For this guide, use the Emotion `ThemeProvider` with the default rebass preset theme.
 
 ```sh
 npm i @rebass/preset emotion-theming
@@ -31,7 +31,7 @@ export default props =>
   </ThemeProvider>
 ```
 
-Alternatively, if you'd like to use Rebass with [Theme UI][],
+Alternatively, if you'd like to use rebass with [Theme UI][],
 you can use the `ThemeProvider` from `theme-ui`, or use [`gatsby-plugin-theme-ui`](https://theme-ui.com/gatsby-plugin).
 
 ```sh
@@ -40,7 +40,7 @@ import { ThemeProvider } from 'theme-ui'
 
 ## Composition
 
-You can use Rebass components out-of-the-box to build larger, composite components.
+You can use rebass components out-of-the-box to build larger, composite components.
 
 ```jsx
 import React from 'react'
@@ -98,11 +98,11 @@ export default ({
   </Box>
 ```
 
-All components in Rebass are extensions of the base [Box](/box) component, which includes an `sx` prop for theme-based styling as well as a standard set of [Styled System][] style props.
+All components in rebass are extensions of the base [Box](/box) component, which includes an `sx` prop for theme-based styling as well as a standard set of [Styled System][] style props.
 
 ## Extending
 
-You can also use Rebass components as basic building blocks and extend them to create custom UI components,
+You can also use rebass components as basic building blocks and extend them to create custom UI components,
 which is a great way to get started with a new design system without *boiling the ocean*.
 
 ```jsx
@@ -123,8 +123,8 @@ export default props =>
 
 ## Theming
 
-Use the default Rebass theme or completely customize the look and feel with a custom theme.
-Since Rebass follows the [Theme Specification][], any theme built for use with [Theme UI][] or [Styled System][] will work out-of-the-box.
+Use the default rebass theme or completely customize the look and feel with a custom theme.
+Since rebass follows the [Theme Specification][], any theme built for use with [Theme UI][] or [Styled System][] will work out-of-the-box.
 
 ```jsx
 import React from 'react'
@@ -160,7 +160,7 @@ export default props =>
 ## Variants
 
 Each component accepts a `variant` prop, giving you multiple styles for buttons, cards, text styles, and more.
-You can define custom variants in your own theme or use the defaults from the Rebass preset theme.
+You can define custom variants in your own theme or use the defaults from the rebass preset theme.
 
 ```jsx live=true
 <Button variant='primary' mr={2}>Beep</Button>

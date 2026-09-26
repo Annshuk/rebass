@@ -1,4 +1,3 @@
-
 # Changelog
 
 ## Unreleased
@@ -29,6 +28,7 @@
 - Update dependencies
 
 ## 4.0.2 2019-08-07
+
 ## 4.0.1 2019-08-06
 
 - Fix ignore files
@@ -46,7 +46,7 @@
 
 ### Breaking Changes
 
-- The default package now uses Emotion. To use Rebass with Styled Components, import the components from `rebass/styled-components` instead.
+- The default package now uses Emotion. To use rebass with Styled Components, import the components from `rebass/styled-components` instead.
 - The undocumented theme keys for `Box`, `Flex`, `Text`, `Heading`, `Link`, `Button`, `Image`, and `Card` are no longer supported. Use variants instead.
 - The `@rebass/grid` package has been renamed (back to) `reflexbox`
 - Heading: default `fontWeight` is now set to `heading`. Add styles to `theme.fontWeights` to customize the `heading` font weight.
@@ -57,7 +57,6 @@
 - Link no longer includes default styles. Add styles to `theme.variants.link` to customize link styles.
 - Card no longer supports the following props. Use the `sx` prop instead.
   `border`, `borderColor`, `borderWidth`, `borderStyle`, `borderRadius`, `borderTop`, `borderRight`, `borderBottom`, `borderLeft`, `borderX`, `borderY`, `boxShadow`, `textShadow`, `background`, `backgroundImage`, `backgroundSize`, `backgroundPosition`, `backgroundRepeat`,
-
 
 ## [3.1.0] 2019-03-23
 
@@ -117,7 +116,7 @@
 - Upgraded for styled-components v4
 - Reduced dependencies to one
 - Removed default theme and colors
-- Removed Rebass Provider component
+- Removed rebass Provider component
 - Added variant theme support to Button and Card
 - Removed `is` prop in favor of styled-components `as` prop
 - Uses Box component as the base for all other components
@@ -206,6 +205,5 @@
 - ScrollCarousel component
 - CarouselSlide component
 - Star comonent
-
 
 [emotion]: https://github.com/emotion-js/emotion

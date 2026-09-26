@@ -1,8 +1,7 @@
-
 # Reflexbox
 
 📦 Ergonomic, responsive React layout and grid system.
-The original *Box* component™ since 2015
+The original _Box_ component™ since 2015
 
 [![Build Status][badge]][travis]
 [![Downloads][downloads-badge]][npm]
@@ -34,22 +33,19 @@ npm i reflexbox
 ```
 
 ```jsx
-import React from 'react'
-import { Flex, Box } from 'reflexbox'
+import React from 'react';
+import { Flex, Box } from 'reflexbox';
 
-export default props =>
+export default (props) => (
   <Flex flexWrap='wrap'>
-    <Box
-      width={[ 1, 1/2 ]}
-      p={3}>
+    <Box width={[1, 1 / 2]} p={3}>
       Reflex
     </Box>
-    <Box
-      width={[ 1, 1/2 ]}
-      p={3}>
+    <Box width={[1, 1 / 2]} p={3}>
       Box
     </Box>
   </Flex>
+);
 ```
 
 ### `sx` Prop
@@ -82,40 +78,38 @@ npm i emotion-theming
 ```
 
 ```jsx
-import React from 'react'
-import { ThemeProvider } from 'emotion-theming'
-import { Flex, Box } from 'reflexbox'
+import React from 'react';
+import { ThemeProvider } from 'emotion-theming';
+import { Flex, Box } from 'reflexbox';
 
 const theme = {
-  breakpoints: [
-    '40em', '52em', '64em',
-  ],
+  breakpoints: ['40em', '52em', '64em'],
   colors: {
     text: '#000',
     background: '#fff',
     primary: '#07c',
   },
-  space: [
-    0, 4, 8, 16, 32, 64, 128, 256,
-  ],
-}
+  space: [0, 4, 8, 16, 32, 64, 128, 256],
+};
 
-export default props =>
+export default (props) => (
   <ThemeProvider theme={theme}>
     <Box
       sx={{
         p: 4,
         bg: 'primary',
-      }}>
+      }}
+    >
       Hello
     </Box>
   </ThemeProvider>
+);
 ```
 
 For use with [Theme UI][], use `gatsby-plugin-theme-ui` or import the Theme UI `ThemeProvider` instead.
 
 ```js
-import { ThemeProvider } from 'theme-ui'
+import { ThemeProvider } from 'theme-ui';
 ```
 
 ## Variants
@@ -126,7 +120,6 @@ such as cards, badges, and CSS grid layouts, in your theme object for reuse.
 Add a `variants` object to your theme and include any variants as style objects. These styles can reference other values in your theme such as colors, typographic styles, and more.
 
 ```js
-// example theme
 export default {
   colors: {
     text: '#000',
@@ -153,7 +146,7 @@ export default {
       borderRadius: 'default',
     },
   },
-}
+};
 ```
 
 To apply a variant to your component, pass the name to the `variant` prop.
@@ -170,10 +163,7 @@ This works on all style props and the `sx` prop.
 See the [Styled System][] docs for more.
 
 ```jsx
-// 100% width at the smallest viewport width
-// 50% width at the next breakpoint
-// 25% width at the next breakpoint
-<Box width={[ '100%', '50%', '25%' ]} />
+<Box width={['100%', '50%', '25%']} />
 ```
 
 You can customize the widths used for each breakpoint by defining a `theme.breakpoints` array in your theme.
@@ -185,84 +175,84 @@ The `Box` and `Flex` components accept the following props:
 
 ### Space Props
 
-Prop | Theme Key
----|---
-`margin`, `m`         | `space`
-`marginTop`, `mt`     | `space`
-`marginRight`, `mr`   | `space`
-`marginBottom`, `mb`  | `space`
-`marginLeft`, `ml`  | `space`
-`marginX`, `mx`  | `space`
-`marginY`, `my`  | `space`
-`padding`, `p`         | `space`
-`paddingTop`, `pt`     | `space`
-`paddingRight`, `pr`   | `space`
-`paddingBottom`, `pb`  | `space`
-`paddingLeft`, `pl`    | `space`
-`paddingX`, `px`  | `space`
-`paddingY`, `py`  | `space`
+| Prop                  | Theme Key |
+| --------------------- | --------- |
+| `margin`, `m`         | `space`   |
+| `marginTop`, `mt`     | `space`   |
+| `marginRight`, `mr`   | `space`   |
+| `marginBottom`, `mb`  | `space`   |
+| `marginLeft`, `ml`    | `space`   |
+| `marginX`, `mx`       | `space`   |
+| `marginY`, `my`       | `space`   |
+| `padding`, `p`        | `space`   |
+| `paddingTop`, `pt`    | `space`   |
+| `paddingRight`, `pr`  | `space`   |
+| `paddingBottom`, `pb` | `space`   |
+| `paddingLeft`, `pl`   | `space`   |
+| `paddingX`, `px`      | `space`   |
+| `paddingY`, `py`      | `space`   |
 
 ### Layout Props
 
-Prop | Theme Key
----|---
-`width` | `sizes`
-`height` | `sizes`
-`minWidth` | `sizes`
-`maxWidth` | `sizes`
-`minHeight` | `sizes`
-`maxHeight` | `sizes`
+| Prop        | Theme Key |
+| ----------- | --------- |
+| `width`     | `sizes`   |
+| `height`    | `sizes`   |
+| `minWidth`  | `sizes`   |
+| `maxWidth`  | `sizes`   |
+| `minHeight` | `sizes`   |
+| `maxHeight` | `sizes`   |
 
 ### Typography Props
 
-Prop | Theme Key
----|---
-`fontFamily` | `fonts`
-`fontSize` | `fontSizes`
-`fontWeight` | `fontWeights`
-`lineHeight` | `lineHeights`
-`letterSpacing` | `letterSpacings`
-`fontStyle` | N/A
-`textAlign` | N/A
+| Prop            | Theme Key        |
+| --------------- | ---------------- |
+| `fontFamily`    | `fonts`          |
+| `fontSize`      | `fontSizes`      |
+| `fontWeight`    | `fontWeights`    |
+| `lineHeight`    | `lineHeights`    |
+| `letterSpacing` | `letterSpacings` |
+| `fontStyle`     | N/A              |
+| `textAlign`     | N/A              |
 
 ### Color Props
 
-Prop | Theme Key
----|---
-`color` | `colors`
-`backgroundColor`, `bg` | `colors`
-`opacity` | N/A
+| Prop                    | Theme Key |
+| ----------------------- | --------- |
+| `color`                 | `colors`  |
+| `backgroundColor`, `bg` | `colors`  |
+| `opacity`               | N/A       |
 
 ### Flexbox Props
 
-Prop | Theme Key
----|---
-`alignItems` | N/A
-`alignContent` | N/A
-`justifyItems` | N/A
-`justifyContent` | N/A
-`flexWrap` | N/A
-`flexDirection` | N/A
-`flex` | N/A
-`flexGrow` | N/A
-`flexShrink` | N/A
-`flexBasis` | N/A
-`justifySelf` | N/A
-`alignSelf` | N/A
-`order` | N/A
+| Prop             | Theme Key |
+| ---------------- | --------- |
+| `alignItems`     | N/A       |
+| `alignContent`   | N/A       |
+| `justifyItems`   | N/A       |
+| `justifyContent` | N/A       |
+| `flexWrap`       | N/A       |
+| `flexDirection`  | N/A       |
+| `flex`           | N/A       |
+| `flexGrow`       | N/A       |
+| `flexShrink`     | N/A       |
+| `flexBasis`      | N/A       |
+| `justifySelf`    | N/A       |
+| `alignSelf`      | N/A       |
+| `order`          | N/A       |
 
 ## Styled Components
 
 To use Reflexbox with Styled Components, import components from `reflexbox/styled-components`.
 
 ```js
-import { Flex, Box } from 'reflexbox/styled-components'
+import { Flex, Box } from 'reflexbox/styled-components';
 ```
 
 ## About
 
-This library is the result of consolidating APIs and ergonomics from the original Reflexbox library, Grid Styled, and Rebass Grid.
-Reflexbox originally appeared with the original version of Rebass in 2015.
+This library is the result of consolidating APIs and ergonomics from the original Reflexbox library, Grid Styled, and rebass Grid.
+Reflexbox originally appeared with the original version of rebass in 2015.
 
 [MIT License](LICENSE.md)
 
@@ -271,4 +261,3 @@ Reflexbox originally appeared with the original version of Rebass in 2015.
 [theme ui]: https://theme-ui.com
 [emotion]: https://emotion.sh
 [styled components]: https://styled-components.com
-

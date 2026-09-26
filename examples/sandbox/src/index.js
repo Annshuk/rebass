@@ -1,31 +1,34 @@
 /* eslint no-unused-vars: 0 */
-import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import preset from '@rebass/preset'
-import { ThemeProvider } from 'emotion-theming'
-// OR import { ThemeProvider } from 'styled-components'
+import { styled, ThemeProvider } from 'styled-components'
 import {
   Box,
   Flex,
+} from 'reflexbox'
+
+import {
   Heading,
-  Text,
   Button,
-  Link,
-  Image,
-  Card,
-} from 'rebass'
-// OR use 'rebass/styled-components'
+} from 'rebass/styled-components'
 
 const theme = {
   ...preset,
 }
 
+const Wrapper = styled(Flex)`
+  align-items: center;
+  justify-content: center;
+  background-color: ${props => props.theme.colors.background};
+`
+
 const App = props => {
   return (
     <ThemeProvider theme={theme}>
+      <Wrapper flexDirection="column" as="section"><Box>1</Box><Box>2</Box></Wrapper>
       <Box variant='styles.root'>
         <Heading as='h1' mb={4}>
-          Rebass Sandbox
+          rebass Sandbox
         </Heading>
         <Button variant='primary' mr={3}>
           Beep
@@ -38,4 +41,4 @@ const App = props => {
   )
 }
 
-render(<App />, root) // eslint-disable-line no-undef
+createRoot(document.getElementById('root')).render(<App />)

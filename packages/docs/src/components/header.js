@@ -63,7 +63,7 @@ export default ({
   setMenu,
   fullwidth,
 }) => {
-  const [ mode, setMode ] = useColorMode()
+  const [mode, setMode] = useColorMode()
 
   const cycleMode = e => {
     const i = (modes.indexOf(mode) + 1) % modes.length
@@ -80,7 +80,7 @@ export default ({
       {!fullwidth && (
         <Button
           title='Toggle Menu'
-          display={[ 'block', 'none' ]}
+          display={['block', 'none']}
           sx={{
             width: 32,
             height: 32,
@@ -96,7 +96,7 @@ export default ({
           <Burger />
         </Button>
       )}
-      <Link variant='nav' href='/'>Rebass</Link>
+      <Link variant='nav' href='/'>rebass</Link>
       <Box mx='auto' />
       <Link
         mr={2}

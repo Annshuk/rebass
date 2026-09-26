@@ -15,7 +15,7 @@ export const Breadcrumbs = ({
   title,
 }) => {
   const { location } = globalHistory
-  const [ n, base, path ] = location.pathname.split('/')
+  const [n, base, path] = location.pathname.split('/')
   if (!breadcrumbRoutes.includes(base)) return false
   if (!path) return false
 
@@ -49,7 +49,7 @@ export const wrapper = ({
   const children = React.Children.toArray(props.children)
     .reduce((acc, child) => {
       const type = child.props.mdxType
-      if (type !== 'h1') return [ ...acc, child ]
+      if (type !== 'h1') return [...acc, child]
       return [
         ...acc,
         child,
@@ -61,7 +61,7 @@ export const wrapper = ({
     <>
       {title && (
         <Helmet>
-          <title>{title} | Rebass</title>
+          <title>{title} | rebass</title>
         </Helmet>
       )}
       {children}

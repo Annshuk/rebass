@@ -1,7 +1,6 @@
-
 # @rebass/preset-material
 
-Material Design theme preset for use with [Rebass][]
+Material Design theme preset for use with [rebass][]
 
 ```sh
 npm i @rebass/preset-material
@@ -12,31 +11,29 @@ npm i @rebass/preset-material
 For general usage with [Emotion][], pass the theme preset to Emotion's `ThemeProvider` component at the root of your application.
 
 ```jsx
-import React from 'react'
-import { ThemeProvider } from 'emotion-theming'
-import theme from '@rebass/preset-material'
+import React from 'react';
+import { ThemeProvider } from 'emotion-theming';
+import theme from '@rebass/preset-material';
 
-export default props =>
-  <ThemeProvider theme={theme}>
-    {props.children}
-  </ThemeProvider>
+export default (props) => (
+  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+);
 ```
 
 For use with [Theme UI][], import the `ThemeProvider` from `theme-ui`.
 
 ```jsx
-import { ThemeProvider } from 'theme-ui'
+import { ThemeProvider } from 'theme-ui';
 ```
 
 Or, if you're using `gatsby-plugin-theme-ui`, export the theme from `src/gatsby-plugin-theme-ui/index.js`.
 
 ```js
-// src/gatsby-plugin-theme-ui/index.js
-import preset from '@rebass/preset-material'
+import preset from '@rebass/preset-material';
 
 export default {
-  ...preset
-}
+  ...preset,
+};
 ```
 
 [MIT License](LICENSE.md)
