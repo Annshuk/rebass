@@ -1,0 +1,59 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "prepare": "lerna run prepare",
+    "start": "yarn workspace docs start",
+    "build": "yarn workspace docs build",
+    "test": "jest",
+    "cover": "npx codecov"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.29.7",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.0.0",
+    "@testing-library/react": "^16.0.0",
+    "jest": "^30.0.0",
+    "jest-emotion": "^11.0.0",
+    "jest-styled-components": "^7.4.0",
+    "lerna": "^10.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "resolutions": {
+    "@mdx-js/react": "^1.5.5"
+  },
+  "jest": {
+    "testMatch": [
+      "**/packages/**/test/*.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "packages/**/src/*.js",
+      "!packages/docs/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "setupFilesAfterEnv": [],
+    "snapshotSerializers": [
+      "jest-emotion"
+    ]
+  }
+}
