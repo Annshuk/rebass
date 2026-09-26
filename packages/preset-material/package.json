@@ -1,5 +1,5 @@
 {
-  "name": "@rebass/preset-material",
+  "name": "@designstack/preset-material",
   "version": "4.1.0",
   "description": "Material Design theme preset for use with rebass",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
     "theme-ui"
   ],
   "author": "Brent Jackson",
-  "repository": "rebassjs/rebass",
+  "repository": "@designstack/rebass",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

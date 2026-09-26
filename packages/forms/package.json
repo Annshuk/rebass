@@ -1,5 +1,5 @@
 {
-  "name": "@rebass/forms",
+  "name": "@designstack/forms",
   "version": "4.1.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -7,9 +7,9 @@
     "prepare": "rebass-bundler"
   },
   "dependencies": {
-    "reflexbox": "^4.1.0"
+    "@designstack/reflexbox": "^4.1.0"
   },
-  "repository": "rebassjs/rebass",
+  "repository": "@designstack/rebass",
   "bugs": {
     "url": "https://github.com/rebassjs/rebass/issues"
   },

@@ -1,5 +1,5 @@
-import { forwardRef } from 'react'
-import { Box, Flex } from 'reflexbox'
+import React, { forwardRef } from 'react'
+import { Box, Flex } from '@designstack/reflexbox'
 
 export { Box, Flex }
 

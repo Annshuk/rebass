@@ -18,8 +18,8 @@ module.exports = {
       plugins: [
         [
           'transform-rename-import', {
-            original: '^reflexbox$',
-            replacement: 'reflexbox/styled-components',
+            original: '^@designstack/reflexbox$',
+            replacement: '@designstack/reflexbox/styled-components',
           }
         ]
       ]

@@ -2,6 +2,8 @@
 
 # rebass
 
+> Designstack-maintained fork. **Fork co-author and maintainer:** Anshuk Sharma. This credits fork-specific work only; the original project and copyright remain attributed to Brent Jackson and contributors.
+
 React primitive UI components built with [Styled System][].
 https://rebassjs.org
 

@@ -10,11 +10,12 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "@rebass/preset": "^4.0.5",
+    "@designstack/preset": "^4.1.0",
+    "@designstack/rebass": "^5.0.0",
     "@emotion/react": "^11.14.0",
+    "@styled-system/should-forward-prop": "^5.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "rebass": "^5.0.0",
     "styled-components": "^6.0.0"
   },
   "browserslist": {

@@ -1,5 +1,5 @@
 {
-  "name": "@rebass/styled-components-example",
+  "name": "@designstack/styled-components-example",
   "private": true,
   "version": "5.0.0",
   "main": "index.js",
@@ -8,11 +8,11 @@
     "start": "react-scripts start"
   },
   "dependencies": {
-    "@rebass/preset": "^4.1.0",
+    "@designstack/preset": "^4.1.0",
+    "@designstack/rebass": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "^5.0.0",
-    "rebass": "^5.0.0",
     "styled-components": "^6.0.0"
   },
   "browserslist": {

@@ -15,11 +15,12 @@
   "dependencies": {
     "@jxnblk/react-live": "^2.1.2-2",
     "@mdx-js/mdx": "^3.1.1",
-    "@rebass/forms": "^4.1.0",
-    "@rebass/layout": "^4.1.0",
-    "@rebass/preset": "^4.1.0",
-    "@rebass/preset-material": "^4.1.0",
-    "@rebass/space": "^4.0.5",
+    "@designstack/forms": "^4.1.0",
+    "@designstack/layout": "^4.1.0",
+    "@designstack/preset": "^4.1.0",
+    "@designstack/preset-material": "^4.1.0",
+    "@designstack/space": "^4.1.0",
+    "@designstack/rebass": "^5.0.0",
     "@theme-ui/presets": "^0.15.4",
     "@theme-ui/prism": "^0.15.4",
     "@theme-ui/sidenav": "^0.15.4",
@@ -33,7 +34,6 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet-async": "^3.0.0",
-    "rebass": "^5.0.0",
     "remark-slug": "^5.1.2",
     "theme-ui": "^0.15.4"
   }

@@ -1,5 +1,5 @@
 {
-  "name": "rebass",
+  "name": "@designstack/rebass",
   "version": "5.0.0",
   "description": "React primitive UI components built with Styled System",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "reflexbox": "^4.1.0"
+    "@designstack/reflexbox": "^4.1.0"
   },
   "repository": "rebassjs/rebass",
   "bugs": {

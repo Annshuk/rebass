@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { Box, Flex } from 'reflexbox'
+import { Box, Flex } from '@designstack/reflexbox'
 import { props as systemProps } from '@styled-system/should-forward-prop'
 
 const rebassProps = [

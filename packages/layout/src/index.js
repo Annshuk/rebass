@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { Box } from 'reflexbox'
+import { Box } from '@designstack/reflexbox'
 
 const px = n => typeof n === 'number' ? n + 'px' : n
 
