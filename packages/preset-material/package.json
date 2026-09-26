@@ -19,7 +19,10 @@
     "theme-ui"
   ],
   "author": "Brent Jackson",
-  "repository": "@designstack/rebass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annshuk/rebass.git"
+  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"

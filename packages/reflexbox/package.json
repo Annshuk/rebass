@@ -30,7 +30,10 @@
   },
   "author": "Brent Jackson",
   "license": "MIT",
-  "repository": "rebassjs/rebass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annshuk/rebass.git"
+  },
   "devDependencies": {
     "babel-plugin-transform-rename-import": "^2.3.0"
   },

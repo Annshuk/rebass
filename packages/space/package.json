@@ -17,7 +17,10 @@
   ],
   "author": "Brent Jackson",
   "license": "MIT",
-  "repository": "@designstack/rebass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annshuk/rebass.git"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.0",
     "@emotion/styled": "^10.0.0",

@@ -9,9 +9,12 @@
   "dependencies": {
     "@designstack/reflexbox": "^4.1.0"
   },
-  "repository": "@designstack/rebass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annshuk/rebass.git"
+  },
   "bugs": {
-    "url": "https://github.com/rebassjs/rebass/issues"
+    "url": "https://github.com/Annshuk/rebass/issues"
   },
   "license": "MIT",
   "publishConfig": {
