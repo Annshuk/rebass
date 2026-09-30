@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import 'jest-styled-components'
+import { matchers } from '@emotion/jest'
 import {
   Label,
   Input,
@@ -9,6 +9,8 @@ import {
   Radio,
   Checkbox
 } from '../src'
+
+expect.extend(matchers)
 
 describe('Label', () => {
   test('renders', () => {

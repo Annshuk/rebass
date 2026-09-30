@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { styled } from 'styled-components'
+import styled from '@emotion/styled'
 import {
   compose,
   space,
@@ -24,9 +24,13 @@ const variant = ({
     )
   )(theme)
 
-export const Box = styled('div').withConfig({
-  shouldForwardProp
-})({
+const styledDiv = styled('div');
+
+const styledWithForwardProp = styledDiv.withConfig
+  ? styledDiv.withConfig({ shouldForwardProp })
+  : styled('div', { shouldForwardProp })
+
+export const Box = styledWithForwardProp({
   boxSizing: 'border-box',
   margin: 0,
   minWidth: 0,

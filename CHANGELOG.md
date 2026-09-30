@@ -1,8 +1,12 @@
 # Changelog
 
-## Unreleased
+## released
+
+## 4.0.7 2019-10-28
 
 - Update dependencies
+- Migrate package component tests to React Testing Library and update Jest snapshots
+- Fix reflexbox style prop forwarding and JSX build configuration
 
 ## 4.0.7 2019-10-28
 

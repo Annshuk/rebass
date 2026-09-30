@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import 'jest-styled-components'
+import { matchers } from '@emotion/jest'
 import {
   Text,
   Heading,
@@ -9,6 +9,8 @@ import {
   Image,
   Card,
 } from '../src'
+
+expect.extend(matchers)
 
 describe('Text', () => {
   test('renders', () => {

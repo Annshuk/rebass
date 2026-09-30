@@ -7,7 +7,7 @@ import { styled, StyleSheetManager, ThemeProvider } from 'styled-components'
 import {
   Box,
   Flex,
-} from '@designstack/reflexbox'
+} from '@designstack/reflexbox/styled-components'
 import {
   Heading,
   Button,

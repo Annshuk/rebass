@@ -1,10 +1,13 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import 'jest-styled-components'
+import { ThemeProvider } from '@emotion/react'
+import { matchers } from '@emotion/jest'
 import {
   Box,
   Flex,
 } from '../src'
+
+expect.extend(matchers)
 
 describe('Box', () => {
   test('renders', () => {
@@ -163,6 +166,25 @@ describe('Box', () => {
     )
     expect(container.firstChild).toHaveStyleRule('color', 'white')
     expect(container.firstChild).toHaveStyleRule('background-color', 'tomato')
+  })
+
+  test('uses the theme from Emotion ThemeProvider', () => {
+    const { container } = render(
+      <ThemeProvider
+        theme={{
+          buttons: {
+            primary: {
+              bg: 'tomato',
+              color: 'white',
+            },
+          },
+        }}
+      >
+        <Box tx='buttons' variant='primary' />
+      </ThemeProvider>
+    )
+    expect(container.firstChild).toHaveStyleRule('background-color', 'tomato')
+    expect(container.firstChild).toHaveStyleRule('color', 'white')
   })
 
 })

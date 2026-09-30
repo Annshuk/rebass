@@ -1,6 +1,6 @@
 {
   "name": "@designstack/rebass",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "React primitive UI components built with Styled System",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
