@@ -2,11 +2,19 @@
 
 ## released
 
-## 4.0.7 2019-10-28
+## 4.1.1 2026-09-26
 
 - Update dependencies
 - Migrate package component tests to React Testing Library and update Jest snapshots
 - Fix reflexbox style prop forwarding and JSX build configuration
+- fix default emotions (for styled component it would be again /styled-components)
+
+## 4.1.0 2026-09-26
+
+- Update dependencies
+- Migrate package component tests to React Testing Library and update Jest snapshots
+- Fix reflexbox style prop forwarding and JSX build configuration
+- breaking updated was default styled component (avoid this release as i will be fix in patch version)
 
 ## 4.0.7 2019-10-28
 
