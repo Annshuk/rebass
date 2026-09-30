@@ -2,6 +2,7 @@
   "version": "5.0.0",
   "npmClient": "yarn",
   "packages": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ]
 }

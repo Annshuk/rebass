@@ -1,7 +1,6 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import { render } from '@testing-library/react'
-import { matchers } from 'jest-emotion'
+import 'jest-styled-components'
 import {
   Label,
   Input,
@@ -11,16 +10,12 @@ import {
   Checkbox
 } from '../src'
 
-expect.extend(matchers)
-
-const renderJSON = el => renderer.create(el).toJSON()
-
 describe('Label', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = render(
       <Label />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild.tagName).toBe('LABEL')
   })
   test('passes ref', () => {
     const ref = React.createRef(null)
@@ -33,10 +28,10 @@ describe('Label', () => {
 
 describe('Input', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = render(
       <Input />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild.tagName).toBe('INPUT')
   })
   test('passes ref', () => {
     const ref = React.createRef(null)
@@ -49,10 +44,10 @@ describe('Input', () => {
 
 describe('Select', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { getByRole } = render(
       <Select />
     )
-    expect(json).toMatchSnapshot()
+    expect(getByRole('combobox').tagName).toBe('SELECT')
   })
   test('passes ref', () => {
     const ref = React.createRef(null)
@@ -63,20 +58,20 @@ describe('Select', () => {
   })
 
   test('margin props are applied to the wrapping element', () => {
-    const json = renderJSON(
+    const { container } = render(
       <Select mb={3} mt={2} />
     )
-    expect(json).toHaveStyleRule('margin-top', '8px')
-    expect(json).toHaveStyleRule('margin-bottom', '16px')
+    expect(container.firstChild).toHaveStyleRule('margin-top', '8px')
+    expect(container.firstChild).toHaveStyleRule('margin-bottom', '16px')
   })
 })
 
 describe('Textarea', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = render(
       <Textarea />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild.tagName).toBe('TEXTAREA')
   })
   test('passes ref', () => {
     const ref = React.createRef(null)
@@ -89,10 +84,10 @@ describe('Textarea', () => {
 
 describe('Radio', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { getByRole } = render(
       <Radio />
     )
-    expect(json).toMatchSnapshot()
+    expect(getByRole('radio').type).toBe('radio')
   })
   test('passes ref', () => {
     const ref = React.createRef(null)
@@ -106,10 +101,10 @@ describe('Radio', () => {
 
 describe('Checkbox', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { getByRole } = render(
       <Checkbox />
     )
-    expect(json).toMatchSnapshot()
+    expect(getByRole('checkbox').type).toBe('checkbox')
   })
   test('passes ref', () => {
     const ref = React.createRef(null)

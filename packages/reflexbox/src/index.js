@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import { styled } from 'styled-components'
 import {
   compose,
@@ -23,7 +24,7 @@ const variant = ({
     )
   )(theme)
 
-export const Box = styled('div', {
+export const Box = styled('div').withConfig({
   shouldForwardProp
 })({
   boxSizing: 'border-box',
@@ -46,3 +47,16 @@ export const Box = styled('div', {
 export const Flex = styled(Box)({
   display: 'flex'
 })
+
+
+export const Image = forwardRef((props, ref) =>
+  <Box
+    ref={ref}
+    as='img'
+    {...props}
+    __css={{
+      maxWidth: '100%',
+      height: 'auto',
+    }}
+  />
+)

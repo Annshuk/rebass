@@ -1,6 +1,6 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import { matchers } from 'jest-emotion'
+import { render } from '@testing-library/react'
+import 'jest-styled-components'
 import {
   Text,
   Heading,
@@ -10,23 +10,19 @@ import {
   Card,
 } from '../src'
 
-expect.extend(matchers)
-
-const render = el => renderer.create(el).toJSON()
-
 describe('Text', () => {
   test('renders', () => {
-    const json = render(
+    const { container } = render(
       <Text textAlign='center' fontWeight='bold' fontStyle='italic' />
     )
-    expect(json.type).toBe('div')
-    expect(json).toHaveStyleRule('text-align', 'center')
-    expect(json).toHaveStyleRule('font-weight', 'bold')
-    expect(json).toHaveStyleRule('font-style', 'italic')
+    expect(container.firstChild.tagName).toBe('DIV')
+    expect(container.firstChild).toHaveStyleRule('text-align', 'center')
+    expect(container.firstChild).toHaveStyleRule('font-weight', 'bold')
+    expect(container.firstChild).toHaveStyleRule('font-style', 'italic')
   })
 
   test('renders with text variants', () => {
-    const json = render(
+    const { container } = render(
       <Text
         theme={{
           text: {
@@ -39,23 +35,23 @@ describe('Text', () => {
         variant='caps'
       />
     )
-    expect(json).toHaveStyleRule('text-transform', 'uppercase')
-    expect(json).toHaveStyleRule('letter-spacing', '0.2em')
+    expect(container.firstChild).toHaveStyleRule('text-transform', 'uppercase')
+    expect(container.firstChild).toHaveStyleRule('letter-spacing', '0.2em')
   })
 })
 
 describe('Heading', () => {
   test('renders', () => {
-    const json = render(
+    const { container } = render(
       <Heading />
     )
-    expect(json.type).toBe('h2')
-    expect(json).toHaveStyleRule('font-size', '24px')
-    expect(json).toHaveStyleRule('font-weight', 'heading')
+    expect(container.firstChild.tagName).toBe('H2')
+    expect(container.firstChild).toHaveStyleRule('font-size', '24px')
+    expect(container.firstChild).toHaveStyleRule('font-weight', 'heading')
   })
 
   test('renders with text variants', () => {
-    const json = render(
+    const { container } = render(
       <Heading
         theme={{
           text: {
@@ -68,39 +64,39 @@ describe('Heading', () => {
         variant='display'
       />
     )
-    expect(json).toHaveStyleRule('font-size', '64px')
-    expect(json).toHaveStyleRule('font-weight', '900')
+    expect(container.firstChild).toHaveStyleRule('font-size', '64px')
+    expect(container.firstChild).toHaveStyleRule('font-weight', '900')
   })
 })
 
 describe('Button', () => {
   test('renders', () => {
-    const json = render(
+    const { container } = render(
       <Button />
     )
-    expect(json.type).toBe('button')
-    expect(json).toHaveStyleRule('color', 'white')
-    expect(json).toHaveStyleRule('background-color', 'primary')
+    expect(container.firstChild.tagName).toBe('BUTTON')
+    expect(container.firstChild).toHaveStyleRule('color', 'white')
+    expect(container.firstChild).toHaveStyleRule('background-color', 'primary')
   })
 
   test('renders as <a>', () => {
-    const json = render(
+    const { container } = render(
       <Button as='a' />
     )
-    expect(json.type).toBe('a')
+    expect(container.firstChild.tagName).toBe('A')
   })
 })
 
 describe('Link', () => {
   test('renders', () => {
-    const json = render(
+    const { container } = render(
       <Link />
     )
-    expect(json.type).toBe('a')
+    expect(container.firstChild.tagName).toBe('A')
   })
 
   test('renders with theme', () => {
-    const json = render(
+    const { container } = render(
       <Link
         theme={{
           variants: {
@@ -111,23 +107,23 @@ describe('Link', () => {
         }}
       />
     )
-    expect(json).toHaveStyleRule('color', 'primary')
+    expect(container.firstChild).toHaveStyleRule('color', 'primary')
   })
 })
 
 describe('Image', () => {
   test('renders', () => {
-    const json = render(
+    const { container } = render(
       <Image />
     )
-    expect(json.type).toBe('img')
-    expect(json).toHaveStyleRule('max-width', '100%')
+    expect(container.firstChild.tagName).toBe('IMG')
+    expect(container.firstChild).toHaveStyleRule('max-width', '100%')
   })
 })
 
 describe('Card', () => {
   test('renders', () => {
-    const json = render(
+    const { container } = render(
       <Card
         p={3}
         bg='tomato'
@@ -137,15 +133,15 @@ describe('Card', () => {
         }}
       />
     )
-    expect(json.type).toBe('div')
-    expect(json).toHaveStyleRule('padding', '16px')
-    expect(json).toHaveStyleRule('background-color', 'tomato')
-    expect(json).toHaveStyleRule('border-radius', '8px')
-    expect(json).toHaveStyleRule('box-shadow', '0 0 48px tomato')
+    expect(container.firstChild.tagName).toBe('DIV')
+    expect(container.firstChild).toHaveStyleRule('padding', '16px')
+    expect(container.firstChild).toHaveStyleRule('background-color', 'tomato')
+    expect(container.firstChild).toHaveStyleRule('border-radius', '8px')
+    expect(container.firstChild).toHaveStyleRule('box-shadow', '0 0 48px tomato')
   })
 
   test('renders with default variant', () => {
-    const json = render(
+    const { container } = render(
       <Card
         theme={{
           variants: {
@@ -158,8 +154,8 @@ describe('Card', () => {
         }}
       />
     )
-    expect(json).toHaveStyleRule('padding', '16px')
-    expect(json).toHaveStyleRule('background-color', 'tomato')
-    expect(json).toHaveStyleRule('border-radius', '4px')
+    expect(container.firstChild).toHaveStyleRule('padding', '16px')
+    expect(container.firstChild).toHaveStyleRule('background-color', 'tomato')
+    expect(container.firstChild).toHaveStyleRule('border-radius', '4px')
   })
 })
