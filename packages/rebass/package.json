@@ -24,7 +24,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "@designstack/reflexbox": "^4.1.0"
+    "@designstack/reflexbox": "^4.1.1"
   },
   "repository": {
     "type": "git",
